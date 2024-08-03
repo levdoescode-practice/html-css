@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lists & Tables</title>
+        <style>
+            th,
+            td {
+                border: 1px solid rgb(160 160 160);
+                padding: 8px 10px;
+            }
+
+            th[scope="col"] {
+                background-color: #505050;
+                color: #fff;
+            }
+
+            th[scope="row"] {
+                background-color: #d6ecd4;
+            }
+
+            td {
+                text-align: center;
+            }
+
+            tr:nth-of-type(even) {
+                background-color: #eee;
+            }
+
+            table {
+                border-collapse: collapse;
+                border: 2px solid rgb(140 140 140);
+                font-family: sans-serif;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+
+            caption {
+                caption-side: bottom;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Unordered Lists -->
+        <ul style="list-style: inherit">
+            <li>Item 1</li>
+            <li style="list-style: circle">Item 2</li>
+            <li style="list-style: disc">Item 3</li>
+            <li style="list-style: square">Item 4</li>
+            <li style="list-style: none">Item 5</li>
+        </ul>
+
+        <!-- Ordered Lists -->
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+        <ol type="1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+        <ol type="A">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+        <ol type="a">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+        <ol type="I">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+        <ol type="i">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ol>
+
+        <!-- Description Lists -->
+        <dl>
+            <dt>Item 1</dt>
+            <dd>Description 1</dd>
+            <dt>Item 2</dt>
+            <dd>Description 2</dd>
+            <dt>Item 3</dt>
+            <dd>Description 3</dd>
+        </dl>
+
+        <!-- Nesteed Lists -->
+        <ul>
+            <li>Item 1</li>
+            <li>
+                Item 2
+                <ul>
+                    <li>Item 2.1</li>
+                    <li>
+                        Item 2.2
+                        <ul>
+                            <li>Item 2.2.1</li>
+                            <li>Item 2.2.2</li>
+                        </ul>
+                    </li>
+                    <li>Item 2.3</li>
+                </ul>
+            </li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+
+        <!-- Tables -->
+        <table>
+            <caption>
+                Table Caption
+            </caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Table with Colspan and Rowspan -->
+        <table style="border: 1px solid">
+            <caption>
+                Table Caption
+            </caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td colspan="2">Row 2, Cell 2 and Cell 3</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Row 3, Cell 1 and Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                    <td>Row 3, Cell 4</td>
+                </tr>
+                <tr>
+                    <td>Row 4, Cell 2</td>
+                    <td>Row 4, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 5, Cell 2</td>
+                    <td>Row 5, Cell 3</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Table with Colgroup -->
+        <table style="border: 1px solid">
+            <caption>
+                Table with Colgroup
+            </caption>
+            <colgroup>
+                <col span="2" style="background-color: lightblue" />
+                <col style="background-color: lightgreen" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Table with Multple Bodies -->
+        <table style="border: 1px solid">
+            <caption>
+                Table with Multple Bodies
+            </caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td>Row 3, Cell 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                    <td>Footer 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Example -->
+        <table>
+            <caption>
+                Alien football stars
+            </caption>
+            <tr>
+                <th scope="col">Player</th>
+                <th scope="col">Gloobles</th>
+                <th scope="col">Za'taak</th>
+            </tr>
+            <tr>
+                <th scope="row">TR-7</th>
+                <td>7</td>
+                <td>4,569</td>
+            </tr>
+            <tr>
+                <th scope="row">Khiresh Odo</th>
+                <td>7</td>
+                <td>7,223</td>
+            </tr>
+            <tr>
+                <th scope="row">Mia Oolong</th>
+                <td>9</td>
+                <td>6,219</td>
+            </tr>
+        </table>
+    </body>
+</html>
